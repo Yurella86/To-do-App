@@ -88,7 +88,7 @@ body {
 }
 .message h3 {
     color: white;
-    font-size: 20px;
+    font-size: 30px;
 }
 .close {
     margin: 0;
@@ -103,5 +103,4 @@ body {
 .close:hover {
     border: 1px solid #285d6f;
     border-radius: 5px;
-    box-shadow: 0 0 5px#122931;
 }
