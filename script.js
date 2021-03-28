@@ -9,8 +9,7 @@ let listMessage = [];
 buttonAdd.addEventListener('click', function () {
     let newTodo = {
         todo: inputText.value,
-        checked: false,
-        important: false
+
     };
     if (inputText.value == "") {
         alert('Please enter a new message!');
