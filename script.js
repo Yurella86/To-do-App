@@ -16,10 +16,6 @@ buttonAdd.addEventListener('click', function () {
     newMessage()
 });
 
-buttonClose.addEventListener('click', function () {
-    console.log('123');
-});
-
 function newMessage() {
     let displayMessage = '';
     listMessage.forEach(function (elem, index) {
@@ -36,3 +32,7 @@ function newMessage() {
         containerCards.innerHTML = displayMessage;
     })
 }
+
+
+
+
