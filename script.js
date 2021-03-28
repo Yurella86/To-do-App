@@ -14,12 +14,15 @@ buttonAdd.addEventListener('click', function () {
     };
     if (inputText.value == "") {
         alert('Please enter a new message!');
-        alert('1')
     } else {
         listMessage.push(newTodo);
         newMessage()
     }
 });
+
+buttonClose.addEventListener('click', function () {
+    alert('1')
+})
 
 function newMessage() {
     let displayMessage = '';
@@ -30,7 +33,7 @@ function newMessage() {
                     <h3>${elem.todo}</h3>
                 </div>
                 <div>
-                <button id="del${index}" class="close"><img src="./img/close.png" alt=""></button>
+                <button id="del${index}" class="close">X</button>
                 </div>
             </li>
         `;
