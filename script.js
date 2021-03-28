@@ -12,8 +12,13 @@ buttonAdd.addEventListener('click', function () {
         checked: false,
         important: false
     };
-    listMessage.push(newTodo);
-    newMessage()
+    if (inputText.value == "") {
+        alert('Please enter a new message!');
+        alert('1')
+    } else {
+        listMessage.push(newTodo);
+        newMessage()
+    }
 });
 
 function newMessage() {

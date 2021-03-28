@@ -12,8 +12,7 @@ body {
     margin: 0 auto;
     text-align: center;
 }
-.header-wrapper {
-}
+
 .header-text {
     color: white;
     text-transform: uppercase;
@@ -66,6 +65,7 @@ body {
     background: url("./img/add.png") 0px -5px no-repeat;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .card-wrapper {
     margin: 15px 50px;
@@ -91,4 +91,5 @@ body {
     border: none;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
