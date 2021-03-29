@@ -62,7 +62,7 @@ body {
     border: 2px solid #285d6f;
     border-radius: 5px;
     width: 45px;
-    background: url("./img/add.png") 0px -5px no-repeat;
+    background: url("./img/add.png") center no-repeat;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -85,6 +85,7 @@ body {
     background-color: rgb(106, 183, 201);
     align-items: center;
     padding: 0 30px 0 30px;
+    overflow: auto;
 }
 .message h3 {
     color: white;
@@ -103,4 +104,69 @@ body {
 .close:hover {
     border: 1px solid #285d6f;
     border-radius: 5px;
+}
+
+/*=================================*/
+
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .input-container {
+        display: block;
+        margin: 0px 10px;
+    }
+
+    #add {
+        display: block;
+        background: url("./img/add.png") center no-repeat;
+        border: 2px solid #285d6f;
+        border-radius: 5px;
+        width: 40px;
+        height: 30px;
+        cursor: pointer;
+        margin: 15px auto;
+    }
+    #cards {
+        margin: 5px 10px;
+        padding: 0px;
+    }
+
+    .message {
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid #215f74;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        padding: 0;
+        background-color: rgb(106, 183, 201);
+        overflow: auto;
+    }
+    .message h3 {
+        margin: 0px;
+        color: white;
+        font-size: 24px;
+        margin: 5px;
+    }
+    .close {
+        margin: 0px 5px;
+        padding: 0px 5px 0px;
+        border: 1px solid #6ab7c9;
+        background-color: #6ab7c9;
+        color: #285d6f;
+        font-weight: 900;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .close:hover {
+        border: 1px solid #285d6f;
+        border-radius: 5px;
+    }
+}
+@media (max-width: 320px) {
+    body {
+        margin: 0;
+    }
 }

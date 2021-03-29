@@ -2,6 +2,7 @@ let newText = document.getElementById('text');
 let add = document.getElementById('add');
 let cards = document.getElementById('cards');
 
+
 add.addEventListener('click', function () {
     if (newText.value === '') {
         alert('Please enter a new message!')
@@ -30,3 +31,37 @@ function createNewEl(text) {
     })
 }
 
+let user = {
+    name: 'John',
+    surname: 'Smith'
+};
+
+let response = fetch('/article/fetch/post/user', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json;charset=utf-8'
+    },
+    body: JSON.stringify(user)
+});
+
+let result = response.json();
+alert(result.message);
+
+
+//fetch('https://jsonplaceholder.typicode.com/my_posts', {
+//    method: 'POST',
+//    body: JSON.stringify({
+//        title: 'yu',
+//        body: 'bar',
+//        userId: 1,
+//    }),
+//    headers: {
+//        'Content-type': 'application/json; charset=UTF-8',
+//    },
+//})
+//    .then((response) => response.json())
+//    .then((json) => console.log(json));
+
+//fetch('https://jsonplaceholder.typicode.com/my_posts')
+//    .then((response) => response.json())
+//    .then((json) => console.log(json));
