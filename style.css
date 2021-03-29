@@ -85,11 +85,11 @@ body {
     background-color: rgb(106, 183, 201);
     align-items: center;
     padding: 0 30px 0 30px;
-    overflow: auto;
 }
 .message h3 {
     color: white;
     font-size: 30px;
+    overflow-x: auto;
 }
 .close {
     margin: 0;
