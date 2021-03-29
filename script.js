@@ -1,21 +1,25 @@
 
 let inputText = document.getElementById('input-text');
 let buttonAdd = document.querySelector('.add');
-let buttonClose = document.getElementById('del0')
-let containerCards = document.querySelector('.card-wrapper')
+let buttonClose = document.querySelector('.close')
+let cardWrapper = document.querySelector('.card-wrapper');
+
 
 let listMessage = [];
+let listDelId = [];
+let s = 0;
 
 buttonAdd.addEventListener('click', function () {
-    let newTodo = {
-        todo: inputText.value,
+    let newTodo = { todo: inputText.value };
 
-    };
     if (inputText.value == "") {
         alert('Please enter a new message!');
     } else {
         listMessage.push(newTodo);
         newMessage()
+        listDelId.push("del" + s)
+        console.log(listDelId)
+        s += 1;
     }
 });
 
@@ -27,16 +31,13 @@ function newMessage() {
     let displayMessage = '';
     listMessage.forEach(function (elem, index) {
         displayMessage += `
-        <li class="message">
-                <div>
-                    <h3>${elem.todo}</h3>
-                </div>
-                <div>
+            <li class="message">
+                <h3>${elem.todo}</h3>
                 <button id="del${index}" class="close">X</button>
-                </div>
             </li>
         `;
-        containerCards.innerHTML = displayMessage;
+        cardWrapper.innerHTML = displayMessage;
+        inputText.value = '';
     })
 }
 

@@ -44,7 +44,7 @@ body {
     margin: 0 70px;
     padding: 5px;
 }
-#input-text {
+#text {
     width: 100%;
     height: 35px;
     font-size: 20px;
@@ -53,12 +53,12 @@ body {
     border-radius: 5px;
     margin-right: 5px;
 }
-#input-text:focus {
+#text:focus {
     border-radius: 5px;
     border: 1px solid#29B0D9;
     padding-left: 5px;
 }
-.add {
+#add {
     border: 2px solid #285d6f;
     border-radius: 5px;
     width: 45px;
@@ -67,12 +67,12 @@ body {
     align-items: center;
     cursor: pointer;
 }
-.add:hover {
+#add:hover {
     border: 2px solid #122931;
     border-radius: 5px;
 }
 
-.card-wrapper {
+#cards {
     margin: 15px 50px;
 }
 .message {
