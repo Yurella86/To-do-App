@@ -78,7 +78,6 @@ body {
 .message {
     display: flex;
     justify-content: space-between;
-    height: 50px;
     border: 2px solid #215f74;
     border-radius: 5px;
     margin: 0px 60px 15px;
@@ -90,6 +89,7 @@ body {
     color: white;
     font-size: 30px;
     overflow-x: auto;
+    margin-right: 20px;
 }
 .close {
     margin: 0;
