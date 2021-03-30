@@ -13,7 +13,7 @@ add.addEventListener('click', function () {
 })
 
 
-async function sendObject(text) {
+/*async function sendObject(text) {
   let user = {
     name: text
   };
@@ -27,8 +27,7 @@ async function sendObject(text) {
   });
   let result = await res.json();
   alert(result.message);
-
-}
+}*/
 
 async function loadNewName() {
   let res = await fetch('https://jsonplaceholder.typicode.com/posts/1')
@@ -50,7 +49,7 @@ async function loadNewName() {
   }
 
 }
-
+/*
 function createNewEl(text) {
   let li = document.createElement('li')
   let h3 = document.createElement('h3')
@@ -68,4 +67,4 @@ function createNewEl(text) {
   buttonClose.addEventListener('click', function () {
     cards.removeChild(li)
   })
-}
+}*/

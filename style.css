@@ -83,7 +83,7 @@ body {
     margin: 0px 60px 15px;
     background-color: rgb(106, 183, 201);
     align-items: center;
-    padding: 0 30px 0 30px;
+    padding: 5px 30px;
 }
 .message h3 {
     color: white;
