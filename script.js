@@ -7,18 +7,17 @@ add.addEventListener('click', function () {
   if (newText.value === '') {
     alert('Please enter a new message!')
   } else {
-    //sendObject(newText.value);
+    sendObject(newText.value);
     loadNewName()
   }
 })
 
 
-/*async function sendObject(text) {
+async function sendObject(text) {
   let user = {
-    name: text
+    title: text
   };
-
-  let res = await fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  let res = await fetch('https://github.com/Yurella86/To-do-App/blob/master/db.json', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
@@ -26,12 +25,13 @@ add.addEventListener('click', function () {
     body: JSON.stringify(user)
   });
   let result = await res.json();
-  alert(result.message);
-}*/
+  alert(result)
+}
 
 async function loadNewName() {
-  let res = await fetch('https://jsonplaceholder.typicode.com/posts/1')
-  let arrayObject = await res.json()
+  let res = await fetch('http://jsonplaceholder.typicode.com/todos')
+  let arrayObject = await res.json();
+  arrayObject = arrayObject.slice(0, 5);
   for (const key in arrayObject) {
     const elementObject = arrayObject[key];
     let li = document.createElement('li')
@@ -39,7 +39,7 @@ async function loadNewName() {
     cards.appendChild(li)
 
     let h3 = document.createElement('h3')
-    h3.innerHTML = elementObject;
+    h3.innerHTML = elementObject.title;
     li.appendChild(h3);
     let buttonClose = document.createElement('button')
     buttonClose.id = 'del';
