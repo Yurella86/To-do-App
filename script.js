@@ -8,7 +8,7 @@ add.addEventListener('click', function () {
     alert('Please enter a new message!')
   } else {
     sendObject(newText.value);
-    loadNewName()
+    //loadNewName()
   }
 })
 
