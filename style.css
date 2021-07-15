@@ -83,12 +83,12 @@ body {
     margin: 0px 60px 15px;
     background-color: rgb(106, 183, 201);
     align-items: center;
-    padding: 5px 30px;
+    padding: 5px 10px 5px 20px;
+    line-height: 30px;
 }
 .message h3 {
     color: white;
     font-size: 30px;
-    overflow-x: auto;
     margin-right: 20px;
 }
 .close {
@@ -100,10 +100,15 @@ body {
     font-weight: 900;
     font-size: 22px;
     cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .close:hover {
-    border: 1px solid #285d6f;
+    background-color: #b61c1c;
+    color: aliceblue;
     border-radius: 5px;
+}
+.close:active{
+    transform: scale(1.1,1.1);
 }
 
 /*=================================*/
