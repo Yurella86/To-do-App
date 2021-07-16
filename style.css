@@ -71,6 +71,9 @@ body {
     border: 2px solid #122931;
     border-radius: 5px;
 }
+#add:active{
+    transform: scale(0.9,0.9);
+}
 
 #cards {
     margin: 15px 50px;
@@ -108,7 +111,7 @@ body {
     border-radius: 5px;
 }
 .close:active{
-    transform: scale(1.1,1.1);
+    transform: scale(0.9,0.9);
 }
 
 /*=================================*/

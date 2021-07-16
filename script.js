@@ -21,29 +21,29 @@ addTodo.addEventListener("click", (el) => {
   }
 });
 
-function addNewItem(newObj) {
+async function addNewItem(newObj) {
   if (lengthItems < 28) {
-    fetch(URL, {
+    await fetch(URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json;charset=utf-8' },
       body: JSON.stringify(newObj)
     })
-    cards.innerHTML = ''
     loadItemsApi()
   } else {
     alert('you have maximum characters')
   }
 }
 
-function deletItem(deletId) {
-  fetch(`${URL}/${deletId}`, {
+async function deletItem(deletId) {
+  await fetch(`${URL}/${deletId}`, {
     method: 'DELETE',
   });
-  cards.innerHTML = ''
+
   loadItemsApi()
 };
 
 function setDomElements(body) {
+  cards.innerHTML = ''
   body.forEach(el => {
     const li = document.createElement('li')
     const h3 = document.createElement('h3')
